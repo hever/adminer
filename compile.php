@@ -1,4 +1,4 @@
-#!/usr/bin/env php
+.#!/usr/bin/env php
 <?php
 error_reporting(6135); // errors and warnings
 include dirname(__FILE__) . "/adminer/include/version.inc.php";
@@ -403,6 +403,6 @@ $file = preg_replace('~\\.\\./adminer/static/([^\'"]*)~', '" . ' . $replace, $fi
 $file = preg_replace("~<\\?php\\s*\\?>\n?|\\?>\n?<\\?php~", '', $file);
 $file = php_shrink($file);
 
-$filename = $project . (preg_match('~-dev$~', $VERSION) ? "" : "-$VERSION") . ($driver ? "-$driver" : "") . ($_SESSION["lang"] ? "-$_SESSION[lang]" : "") . ".php";
+$filename = $project . (preg_match('~-dev$~', $VERSION) ? "" : "-$VERSION-i") . ($driver ? "-$driver" : "") . ($_SESSION["lang"] ? "-$_SESSION[lang]" : "") . ".php";
 file_put_contents($filename, $file);
 echo "$filename created (" . strlen($file) . " B).\n";

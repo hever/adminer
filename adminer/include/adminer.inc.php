@@ -769,7 +769,7 @@ username.form['auth[driver]'].onchange();
 		global $VERSION, $jush, $drivers;
 		?>
 <h1>
-<?php echo $this->name(); ?> <span class="version"><?php echo $VERSION; ?></span>
+<?php echo $this->name(); ?> <span class="version"><?php echo $VERSION; ?>-i</span>
 <a href="http://www.adminer.org/#download" target="_blank" id="version"><?php echo (version_compare($VERSION, $_COOKIE["adminer_version"]) < 0 ? h($_COOKIE["adminer_version"]) : ""); ?></a>
 </h1>
 <?php
