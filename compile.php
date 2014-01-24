@@ -395,6 +395,7 @@ $file = str_replace('<script type="text/javascript" src="../externals/jush/modul
 $file = str_replace('<script type="text/javascript" src="../externals/jush/modules/jush-txt.js"></script>' . "\n", "", $file);
 $file = str_replace('<script type="text/javascript" src="../externals/jush/modules/jush-<?php echo $jush; ?>.js"></script>' . "\n", "", $file);
 $file = str_replace('<link rel="stylesheet" type="text/css" href="../externals/jush/jush.css">' . "\n", "", $file);
+$file = str_replace('<link rel="stylesheet" type="text/css" href="../externals/jush/iconizer.css">' . "\n", "", $file);
 $file = preg_replace_callback("~compile_file\\('([^']+)'(?:, '([^']*)')?\\)~", 'compile_file', $file); // integrate static files
 $replace = 'h(preg_replace("~\\\\\\\\?.*~", "", ME)) . "?file=\\1&amp;version=' . $VERSION . ($driver ? '&amp;driver=' . $driver : '');
 $file = preg_replace('~\\.\\./adminer/static/(default\\.css|functions\\.js|favicon\\.ico)~', '<?php echo ' . $replace . '"; ?>', $file);

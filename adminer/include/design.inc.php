@@ -19,6 +19,7 @@ function page_header($title, $error = "", $breadcrumb = array(), $title2 = "") {
 <meta name="robots" content="noindex">
 <title><?php echo $title_page; ?></title>
 <link rel="stylesheet" type="text/css" href="../adminer/static/default.css">
+<link rel="stylesheet" type="text/css" href="../adminer/static/iconizer.css">
 <script type="text/javascript" src="../adminer/static/functions.js"></script>
 <script type="text/javascript" src="static/editing.js"></script>
 <?php if ($adminer->head()) { ?>
