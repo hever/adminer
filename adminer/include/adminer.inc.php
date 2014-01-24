@@ -863,7 +863,7 @@ username.form['auth[driver]'].onchange();
 	function tablesPrint($tables) {
 		echo "<p id='tables' onmouseover='menuOver(this, event);' onmouseout='menuOut(this);'>\n";
 		foreach ($tables as $table => $status) {
-			echo '<a href="' . h(ME) . 'select=' . urlencode($table) . '"' . bold($_GET["select"] == $table || $_GET["edit"] == $table) . ">" . lang('select') . "</a> ";
+			echo '<a href="' . h(ME) . 'select=' . urlencode($table) . '"' . bold($_GET["select"] == $table || $_GET["edit"] == $table) . " title='" . lang('select') . "'>" . lang('select') . "</a> ";
 			$name = $this->tableName($status);
 			echo (support("table") || support("indexes")
 				? '<a href="' . h(ME) . 'table=' . urlencode($table) . '"' . bold(in_array($table, array($_GET["table"], $_GET["create"], $_GET["indexes"], $_GET["foreign"], $_GET["trigger"])), (is_view($status) ? "view" : "")) . " title='" . lang('Show structure') . "'>$name</a>"
