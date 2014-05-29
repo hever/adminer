@@ -2,6 +2,8 @@ Adminer-iconized - original Adminer with few little changes that pack into final
   single file also css with icons. Also add title to image-replaced text 
   elements. Everythig else is same as original Adminer (include license).
 
+Final single file here: https://sourceforge.net/projects/adminer-iconized/
+
 -----<original>-------
 Adminer - Database management in a single PHP file
 Adminer Editor - Data manipulation for end-users
