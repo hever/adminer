@@ -523,3 +523,16 @@ function db_size($db) {
 	}
 	return format_number($return);
 }
+
+/** Print SET NAMES if utf8mb4 might be needed
+* @param string
+* @return null
+*/
+function set_utf8mb4($create) {
+  global $connection;
+	static $set = false;
+	if (!$set && preg_match('~\butf8mb4~i', $create)) { // possible false positive
+		$set = true;
+		echo "SET NAMES " . charset($connection) . ";\n\n";
+	}
+}
