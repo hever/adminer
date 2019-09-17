@@ -2,9 +2,9 @@
 
 /** Log all queries to SQL file (manual queries through SQL command are not logged)
 * @link https://www.adminer.org/plugins/#use
-* @author Jakub Vrana, http://www.vrana.cz/
-* @license http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
-* @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2 (one or other)
+* @author Jakub Vrana, https://www.vrana.cz/
+* @license https://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
+* @license https://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2 (one or other)
 */
 class AdminerSqlLog {
 	/** @access protected */
@@ -17,7 +17,15 @@ class AdminerSqlLog {
 		$this->filename = $filename;
 	}
 	
-	function messageQuery($query, $time) {
+	function messageQuery($query, $time, $failed = false) {
+		$this->_log($query);
+	}
+
+	function sqlCommandQuery($query) {
+		$this->_log($query);
+	}
+
+	function _log($query) {
 		if ($this->filename == "") {
 			$adminer = adminer();
 			$this->filename = $adminer->database() . ".sql"; // no database goes to ".sql" to avoid collisions

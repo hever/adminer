@@ -77,7 +77,6 @@ $translations = array(
 	'Use' => 'Koristi',
 	'Select database' => 'Izaberite bazu',
 	'Invalid database.' => 'Neispravna baza podataka.',
-	'Create new database' => 'Napravi novu bazu podataka',
 	'Database has been dropped.' => 'Baza podataka je izbrisana.',
 	'Databases have been dropped.' => 'Baze podataka su izbrisane.',
 	'Database has been created.' => 'Baza podataka je spašena.',
@@ -235,7 +234,7 @@ $translations = array(
 	'last' => 'poslijednja',
 	'Loading' => 'Učitavam',
 	'Load more data' => 'Učitavam još podataka',
-	'whole result' => 'ceo rezultat',
+	'Whole result' => 'Ceo rezultat',
 	'%d byte(s)' => array('%d bajt', '%d bajta', '%d bajtova'),
 
 	'Import' => 'Uvoz',
